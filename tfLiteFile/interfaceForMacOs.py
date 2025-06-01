@@ -9,7 +9,6 @@ from PIL import Image
 
 # Function to perform object detection using TensorFlow Lite model
 def tflite_detect_image(modelpath, image, lblpath, min_conf=0.1, savepath='./results'):
-
     with open(lblpath, 'r') as f:
         labels = [line.strip() for line in f.readlines()]
 
@@ -85,7 +84,7 @@ if uploaded_file is not None:
     st.image(image, caption="Uploaded Image", use_column_width=True)
 
     if st.button("Run Object Detection"):
-        PATH_TO_MODEL = 'trainedcom.tflite'   # Path to .tflite model file
-        PATH_TO_LABELS = 'labelmap.txt'   # Path to labelmap.txt file
+        PATH_TO_MODEL = 'tfLiteFile/trainedcom.tflite'   # Path to .tflite model file
+        PATH_TO_LABELS = 'tfLiteFile/labelmap.txt'   # Path to labelmap.txt file
 
         tflite_detect_image(PATH_TO_MODEL, image, PATH_TO_LABELS)
