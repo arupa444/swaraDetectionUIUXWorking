@@ -60,10 +60,12 @@ cd swara-detection-ui
 ### Step 2: Install dependencies  
 ```bash
 pip install -r requirements.txt
+```
 
 ### Step 3: Launch Streamlit app 
 ```bash
 streamlit run tfLiteFile/interfaceForMacOs.py
+```
 
 ## 📦 Requirements
 Make sure your requirements.txt includes:
